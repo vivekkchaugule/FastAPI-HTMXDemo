@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h2>Hello World</h2>
+    <p>Welcome to the FastAPI intro</p>
+
+    <div id="like_count">{{likes}}</div>
+
+    <button hx-post="/click/like" hx-target="#like_count" hx-swap="innerHTML">
+        Like
+    </button>
+    <button hx-post="/click/unlike" hx-target="#like_count" hx-swap="innerHTML">
+        Unlike
+    </button>
+</body>
+</html>
